@@ -1,0 +1,52 @@
+namespace CSharpFinalPROJECT.Models
+{
+    
+    /// Represents a user in the system. 
+    /// Maps to the 'Users' table in the database.
+    /// </summary>
+    public class User
+    {
+        /// Primary key. Auto-incremented ID of the user.
+        /// </summary>
+        public int UserID { get; set; }
+
+        /// User's first name.
+        /// </summary>
+        public string FirstName { get; set; } = null!;
+
+        /// User's last name.
+        /// </summary>
+        public string LastName { get; set; } = null!;
+
+        /// Unique username used for login or identification.
+        /// </summary>
+        public string Username { get; set; } = null!;
+
+        /// Encrypted or hashed password for authentication.
+        /// </summary>
+        public string UserPassword { get; set; } = null!;
+
+        /// Contact email of the user.
+        /// </summary>
+        public string Email { get; set; } = null!;
+
+        /// Contact phone number of the user.
+        /// </summary>
+        public string Phone { get; set; } = null!;
+
+        /// Navigation property.
+        /// Represents the many-to-many relationship between Users and Roles.
+        /// </summary>
+        public List<UserRole>? UserRoles { get; set; }
+
+        /// Navigation property.
+        /// Each user may have one or more billing methods.
+        /// </summary>
+        public List<BillingInfo>? BillingInfos { get; set; }
+
+        /// Navigation property.
+        /// Stores all bookings made by this user.
+        /// </summary>
+        public List<Booking>? Bookings { get; set; }
+    }
+}
