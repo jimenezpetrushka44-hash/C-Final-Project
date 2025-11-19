@@ -7,6 +7,8 @@ namespace C_FinallPROJECT.Models
         public string HotelLocation { get; set; } = null!;
         public string HotelStatus { get; set; } = "Open";
 
+        public List<Floors>? Floor { get; set; }
+
 
     }
 }
