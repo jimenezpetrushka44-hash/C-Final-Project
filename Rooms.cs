@@ -8,6 +8,9 @@ namespace C_FinallPROJECT.Models
 
         public Floors Floor { get; set; } = null!;
         public RoomType RoomTypes { get; set; } = null!;
+
+        public List<AssetsInRooms>? AssetsInRoom { get; set; }
+        public List<Bookings>? Booking { get; set; }
     }
 }
  
